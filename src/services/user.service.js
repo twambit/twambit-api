@@ -8,6 +8,17 @@ const userService = {
    * Registers a new user.
    * In a real application, this would interact with a database.
    */
+
+  saveBulkUsers: async (userItems) => {
+    try {
+      // in real app save to database
+      return userItems;
+    } catch (error) {
+      console.error("Error posting users to API:", error);
+      throw error;
+    }
+  },
+
   registerUser: (username, email) => {
     const newUser = { id: users.length + 1, username, email };
     users.push(newUser);

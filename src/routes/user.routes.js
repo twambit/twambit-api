@@ -32,5 +32,12 @@ router.post('/', (req, res) => {
   res.status(201).send('Create a new user');
 });
 
+// POST a new user
+router.post('/', (req, res) => {
+  res.status(201).send('Create a new user');
+});
+// POST bulk users
+router.post('/saveBulkUsers', userController.saveBulkUsers);  
+
 // Export the router module
 export default router;
